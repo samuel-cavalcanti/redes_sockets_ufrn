@@ -3,7 +3,7 @@ import unittest
 from .time_server import TimeServer
 
 
-class ServerTester(unittest.TestCase):
+class TimeServerTest(unittest.TestCase):
 
     def test_receive_correct_message_from_client(self):
         server = TimeServer()
@@ -21,4 +21,4 @@ class ServerTester(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.TextTestRunner().run(ServerTester())
+    unittest.TextTestRunner().run(TimeServerTest())

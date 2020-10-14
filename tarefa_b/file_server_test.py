@@ -1,6 +1,6 @@
 import unittest
 
-from file_server import FileServer
+from .file_server import FileServer
 
 
 class FileServerTest(unittest.TestCase):
@@ -18,7 +18,9 @@ class FileServerTest(unittest.TestCase):
     def test_server_has_file(self):
         file_server = FileServer()
 
-        possible_command_in_bytes = 'obter file.txt'.encode()
+        dir = '/'.join(__file__.split('/')[:-1])
+
+        possible_command_in_bytes = f'obter {dir}/file.txt'.encode()
 
         content = file_server.execute_command(possible_command_in_bytes)
 
