@@ -10,7 +10,6 @@ class TimeServerTest(unittest.TestCase):
         message = 'data'.encode()
         output_message = server.response(message)
         self.assertFalse('only command supported is data' in output_message.decode())
-
         return
 
     def test_receive_wrong_message_from_client(self):

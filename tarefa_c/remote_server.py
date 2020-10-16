@@ -21,9 +21,8 @@ class RemoteServer:
 
     @staticmethod
     def __execute_command(command: bytes) -> str:
-        command_and_args = command.decode().split(' ')
 
         completed_sub_process = subprocess.run(
-            command_and_args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            ["sh", "-c", command.decode()], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
         return f"{completed_sub_process.stdout.decode()} \n {completed_sub_process.stderr.decode()}"

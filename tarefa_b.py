@@ -3,7 +3,7 @@ import socket as socket_module
 from arg_parse_socket_homework import ArgParseSocketHomework
 from tarefa_b.file_server import FileServer
 
-server_port = 6000
+server_port = 6001
 server_address = 'localhost'
 
 
